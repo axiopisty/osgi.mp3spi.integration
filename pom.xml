@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.github.axiopisty</groupId>
+  <artifactId>osgi.mp3spi.integration</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>com.github.axiopisty.osgi.mp3spi.integration.standalone</module>
+    <module>com.github.axiopisty.osgi.mp3spi.integration.bundle.activator</module>
+    <module>com.github.axiopisty.osgi.mp3spi.integration.mp3player</module>
+  </modules>
+
+  <name>osgi.mp3spi.integration</name>
+  <url>https://github.com/axiopisty/osgi.mp3spi.integration</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <jvm.language.level>1.8</jvm.language.level>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.3</version>
+        <configuration>
+          <source>${jvm.language.level}</source>
+          <target>${jvm.language.level}</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

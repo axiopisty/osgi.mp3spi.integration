@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.github.axiopisty</groupId>
+        <artifactId>osgi.mp3spi.integration</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.github.axiopisty</groupId>
+    <artifactId>com.github.axiopisty.osgi.mp3spi.integration.bundle.activator</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>bundle</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.framework</artifactId>
+            <version>5.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>com.github.axiopisty.osgi.mp3spi.integration.mp3player</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>2.5.4</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <!--<Bundle-Name>${project.artifactId}</Bundle-Name>-->
+                        <!--<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>-->
+                        <!--<Bundle-Version>${project.version}</Bundle-Version>-->
+                        <Private-Package>com.github.axiopisty.osgi.mp3spi.integration.bundle.activator</Private-Package>
+                        <!--<Import-Package>*</Import-Package>-->
+                        <Bundle-Activator>com.github.axiopisty.osgi.mp3spi.integration.bundle.activator.Activator</Bundle-Activator>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
