@@ -1,0 +1,38 @@
+
+
+# IntelliJ IDE Files
+.idea
+*.iml
+*.ipr
+*.iws
+
+
+
+# Eclipse IDE Files
+.project
+.settings
+.classpath
+.factorypath
+.apt_generated
+
+
+
+# Maven Build Files
+target
+pom.xml.versionsBackup
+overlays
+dependency-reduced-pom.xml
+
+
+# Mac OS
+.DS_Store
+
+
+# Vagrant
+.vagrant
+
+
+# Felix
+felix/felix-cache/
+felix/bundle/com.github.axiopisty.*
+felix/bundle/com.github.axiopisty.*
