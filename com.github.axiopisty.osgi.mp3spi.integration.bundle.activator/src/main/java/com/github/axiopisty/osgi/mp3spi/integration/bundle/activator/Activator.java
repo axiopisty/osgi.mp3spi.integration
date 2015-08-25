@@ -10,7 +10,11 @@ public class Activator implements BundleActivator {
   @Override
   public void start(BundleContext bundleContext) throws Exception {
     System.out.println("Bundle started");
-    Application.launch(Gui.class);
+    Thread t = new Thread(() -> {
+      Application.launch(Gui.class);
+    });
+    t.setDaemon(true);
+    t.start();
   }
 
   @Override

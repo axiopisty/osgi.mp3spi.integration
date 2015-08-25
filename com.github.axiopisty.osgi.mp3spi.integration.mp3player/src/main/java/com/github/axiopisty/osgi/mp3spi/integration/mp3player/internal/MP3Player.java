@@ -1,7 +1,6 @@
 package com.github.axiopisty.osgi.mp3spi.integration.mp3player.internal;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
@@ -18,7 +17,7 @@ public class MP3Player implements Runnable {
   private final SourceDataLine line;
 
   public MP3Player(File mp3) throws LineUnavailableException, IOException, UnsupportedAudioFileException {
-    final AudioInputStream in = AudioSystem.getAudioInputStream(new FileInputStream(mp3));
+    final AudioInputStream in = AudioSystem.getAudioInputStream(mp3);
     final AudioFormat format = in.getFormat();
     decodedAudioInputStream = AudioSystem.getAudioInputStream(new AudioFormat(
       AudioFormat.Encoding.PCM_SIGNED,
