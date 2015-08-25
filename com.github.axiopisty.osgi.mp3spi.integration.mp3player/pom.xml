@@ -17,8 +17,15 @@
 
     <repositories>
         <repository>
-            <id>project-local-repo</id>
-            <url>file://${project.basedir}/repo</url>
+          <id>project-local-repo</id>
+          <releases>
+            <enabled>true</enabled>
+            <checksumPolicy>ignore</checksumPolicy>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <url>file://${project.baseUri}/repo</url>
         </repository>
     </repositories>
 
