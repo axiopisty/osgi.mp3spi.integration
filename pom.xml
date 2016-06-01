@@ -8,7 +8,6 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>com.github.axiopisty.osgi.mp3spi.integration.standalone</module>
     <module>com.github.axiopisty.osgi.mp3spi.integration.bundle.activator</module>
     <module>com.github.axiopisty.osgi.mp3spi.integration.mp3player</module>
   </modules>
