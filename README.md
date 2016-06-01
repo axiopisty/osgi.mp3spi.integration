@@ -42,6 +42,3 @@ stop the application just stop bundle 0 from the gogo shell.
 
     g! stop 0
 
-
-
-[![Build Status](https://travis-ci.org/axiopisty/osgi.mp3spi.integration.svg?branch=master)](https://travis-ci.org/axiopisty/osgi.mp3spi.integration)
